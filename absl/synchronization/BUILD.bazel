@@ -167,12 +167,8 @@ cc_test(
 
 cc_library(
     name = "thread_pool",
-    testonly = 1,
     hdrs = ["internal/thread_pool.h"],
     linkopts = ABSL_DEFAULT_LINKOPTS,
-    visibility = [
-        "//absl:__subpackages__",
-    ],
     deps = [
         ":synchronization",
         "//absl/base:core_headers",
